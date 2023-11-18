@@ -2,8 +2,7 @@ package dev.wallpaper.core.provider.pexels;
 
 import dev.wallpaper.domain.enums.OrientationEnum;
 import dev.wallpaper.domain.model.ImageModel;
-import kong.unirest.JsonNode;
-import kong.unirest.Unirest;
+import kong.unirest.*;
 import kong.unirest.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -41,12 +40,18 @@ public class ImageUrlPexelsProvider {
     }
 
     private JsonNode getImageListFromPexelsApi() {
-        logger.debug("making request to Pexels API");
-        return Unirest.get(url)
-                .queryString("per_page", perPage)
-                .header("Authorization", key)
-                .asJson()
-                .getBody();
+        logger.debug("making request to get list from Pexels API");
+        GetRequest request = Unirest.get(url);
+        request.queryString("per_page", perPage)
+                .queryString("page", this.getRandomPage())
+                .header("Authorization", key);
+        logger.debug("Requesting: "+request.getHttpMethod()+" "+request.getUrl());
+
+        return request.asJson().getBody();
+    }
+
+    private Integer getRandomPage() {
+        return (int) (Math.random() * 100 + 1);
     }
 
     private void responseToModelList(JsonNode response) {

@@ -1,6 +1,7 @@
 package dev.wallpaper.core.provider.pexels;
 
 import dev.wallpaper.exceptions.ImageDownloadException;
+import kong.unirest.GetRequest;
 import kong.unirest.Unirest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,9 +35,9 @@ public class DownloadPexelsProvider {
 
     private void getImageBytesFromPexelsApi(String url) {
         logger.debug("making request to get image bytes from Pexels API");
-        bytesFromImage =  Unirest.get(url)
-                                .asBytes()
-                                .getBody();
+        GetRequest request = Unirest.get(url);
+        logger.debug("Requesting: "+request.getHttpMethod()+" "+request.getUrl());
+        bytesFromImage = request.asBytes().getBody();
     }
 
 }
