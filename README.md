@@ -15,3 +15,6 @@ Into the folder /docs exists a file to Insomnia Collection.
 
 ![Image](./docs/request-example.png)
 
+## Project Topology
+
+![Image](./docs/topology.excalidraw.png)
