@@ -49,7 +49,7 @@ public class ImageEditor {
     }
 
     private Integer getFontSizeFromImageWidth() {
-        return (bufferedImage.getWidth()/100)+10;
+        return (int) (((bufferedImage.getWidth()/100)*1.5)+30);
     }
 
     private void loadGraphics() {
