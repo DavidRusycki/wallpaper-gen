@@ -1,0 +1,15 @@
+# Pexels
+pexels:
+  key: 'KJSFKLÇSJDÇFLKJSÇDKLJ'
+  url: 'https://api.pexels.com/v1/curated'
+  per_page: 80
+
+# Logging
+logging:
+  level:
+    dev.wallpaper: 'DEBUG'
+
+# File Appender
+file-appender:
+  active: true
+  path: '/home/david/Downloads/images'

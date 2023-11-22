@@ -36,7 +36,7 @@ public class DownloadPexelsProvider {
     private void getImageBytesFromPexelsApi(String url) {
         logger.debug("making request to get image bytes from Pexels API");
         GetRequest request = Unirest.get(url);
-        logger.debug("Requesting: "+request.getHttpMethod()+" "+request.getUrl());
+        logger.debug("Requesting: {} {}", request.getHttpMethod(), request.getUrl());
         bytesFromImage = request.asBytes().getBody();
     }
 

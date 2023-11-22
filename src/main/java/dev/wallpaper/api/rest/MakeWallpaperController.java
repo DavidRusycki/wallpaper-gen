@@ -26,7 +26,7 @@ public class MakeWallpaperController {
             @RequestParam String content,
             @RequestParam OrientationEnum orientation
     ) throws CreateWallpaperException {
-        logger.info("Received request to make a "+orientation+" wallpaper");
+        logger.info("Received request to make a {} wallpaper", orientation);
         byte[] imageBytes = creator.createWallpaper(content, orientation);
 
         return ResponseEntity.ok().body(imageBytes);

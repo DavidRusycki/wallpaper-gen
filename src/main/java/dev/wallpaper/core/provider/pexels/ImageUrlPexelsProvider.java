@@ -6,6 +6,7 @@ import kong.unirest.*;
 import kong.unirest.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -17,37 +18,18 @@ public class ImageUrlPexelsProvider {
 
     public final static Logger logger = LoggerFactory.getLogger(ImageUrlPexelsProvider.class);
 
-    @Value("${pexels.key}")
-    private String key;
-
-    @Value("${pexels.per_page}")
-    private Integer perPage;
-
-    @Value("${pexels.url}")
-    private String url;
+    @Autowired
+    private CuratedPexelsProvider curatedPexelsProvider;
 
     private List<ImageModel> images;
 
     public String getImageUrlFromOrientation(OrientationEnum orientation) throws Exception {
-        String result = null;
-
-        JsonNode response =  this.getImageListFromPexelsApi();
+        JsonNode response =  curatedPexelsProvider.getJsonFromApi(this.getRandomPage());
         this.responseToModelList(response);
-        result = this.getFirstImageFromOrientation(orientation);
+        String result = this.getFirstImageFromOrientation(orientation);
         this.validateFoundImage(result);
 
         return result;
-    }
-
-    private JsonNode getImageListFromPexelsApi() {
-        logger.debug("making request to get list from Pexels API");
-        GetRequest request = Unirest.get(url);
-        request.queryString("per_page", perPage)
-                .queryString("page", this.getRandomPage())
-                .header("Authorization", key);
-        logger.debug("Requesting: "+request.getHttpMethod()+" "+request.getUrl());
-
-        return request.asJson().getBody();
     }
 
     private Integer getRandomPage() {

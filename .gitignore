@@ -1,5 +1,8 @@
-src/main/resources/application.properties
-/src/main/resources/application.properties
+src/main/resources/production.yaml
+/src/main/resources/production.yaml
+
+src/main/resources/developer.yaml
+/src/main/resources/developer.yaml
 
 HELP.md
 target/
