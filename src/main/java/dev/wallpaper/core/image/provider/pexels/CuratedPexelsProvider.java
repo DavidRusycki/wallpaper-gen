@@ -1,4 +1,4 @@
-package dev.wallpaper.core.provider.pexels;
+package dev.wallpaper.core.image.provider.pexels;
 
 import kong.unirest.GetRequest;
 import kong.unirest.JsonNode;

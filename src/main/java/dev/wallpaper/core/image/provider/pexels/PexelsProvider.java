@@ -1,4 +1,4 @@
-package dev.wallpaper.core.provider.pexels;
+package dev.wallpaper.core.image.provider.pexels;
 
 import dev.wallpaper.domain.enums.OrientationEnum;
 import dev.wallpaper.domain.provider.IProvider;

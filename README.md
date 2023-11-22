@@ -1,6 +1,6 @@
 # wallpaper-gen
 
-This projects have the objective to generate wallpapers with a random image from thirdy party API's. And permite of user defines a one frase to add into center of image. This projects makes with Java 17. And initial use the Pexel API.
+This project have the objective of generate wallpapers with a random image from thirdy party API's. And permit the user defines one frase to add into center of image. This projects makes with Java 17 and initial use the Pexel API.
 
 ## Tecnologies
 

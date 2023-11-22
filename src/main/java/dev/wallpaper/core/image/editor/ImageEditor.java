@@ -1,4 +1,4 @@
-package dev.wallpaper.core.image;
+package dev.wallpaper.core.image.editor;
 
 import lombok.Data;
 import org.slf4j.Logger;
@@ -9,7 +9,6 @@ import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.IOException;
 
 @Data
 @Component

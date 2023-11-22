@@ -1,7 +1,6 @@
-package dev.wallpaper.core.image;
+package dev.wallpaper.core.image.provider;
 
-import dev.wallpaper.core.provider.pexels.PexelsProvider;
-import dev.wallpaper.core.wallpaper.Creator;
+import dev.wallpaper.core.image.provider.pexels.PexelsProvider;
 import dev.wallpaper.domain.enums.OrientationEnum;
 import dev.wallpaper.exceptions.ImageDownloadException;
 import org.slf4j.Logger;

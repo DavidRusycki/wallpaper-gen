@@ -1,4 +1,4 @@
-package dev.wallpaper.core.provider.pexels;
+package dev.wallpaper.core.image.provider.pexels;
 
 import dev.wallpaper.domain.enums.OrientationEnum;
 import dev.wallpaper.domain.model.ImageModel;
@@ -7,7 +7,6 @@ import kong.unirest.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

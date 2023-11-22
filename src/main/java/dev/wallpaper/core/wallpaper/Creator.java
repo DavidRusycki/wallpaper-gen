@@ -1,11 +1,9 @@
 package dev.wallpaper.core.wallpaper;
 
-import dev.wallpaper.api.rest.MakeWallpaperController;
-import dev.wallpaper.core.image.ImageEditor;
-import dev.wallpaper.core.image.ImageProvider;
+import dev.wallpaper.core.image.editor.ImageEditor;
+import dev.wallpaper.core.image.provider.ImageProvider;
 import dev.wallpaper.domain.enums.OrientationEnum;
 import dev.wallpaper.exceptions.CreateWallpaperException;
-import dev.wallpaper.exceptions.ImageDownloadException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
