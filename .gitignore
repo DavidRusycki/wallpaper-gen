@@ -1,8 +1,8 @@
-src/main/resources/production.yaml
-/src/main/resources/production.yaml
+src/main/resources/application.yaml
+/src/main/resources/application.yaml
 
-src/main/resources/developer.yaml
-/src/main/resources/developer.yaml
+src/main/resources/application-developer.yaml
+/src/main/resources/application-developer.yaml
 
 HELP.md
 target/
