@@ -1,8 +1,8 @@
-package dev.wallpaper.api.rest;
+package dev.wallpaper.rest;
 
 import dev.wallpaper.core.wallpaper.Creator;
 import dev.wallpaper.domain.enums.OrientationEnum;
-import dev.wallpaper.exceptions.CreateWallpaperException;
+import dev.wallpaper.domain.exceptions.CreateWallpaperException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,7 +1,7 @@
 package dev.wallpaper.domain.provider;
 
 import dev.wallpaper.domain.enums.OrientationEnum;
-import dev.wallpaper.exceptions.ImageDownloadException;
+import dev.wallpaper.domain.exceptions.ImageDownloadException;
 
 import java.io.File;
 
