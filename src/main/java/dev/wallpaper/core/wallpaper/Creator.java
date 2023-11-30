@@ -3,7 +3,7 @@ package dev.wallpaper.core.wallpaper;
 import dev.wallpaper.core.image.editor.ImageEditor;
 import dev.wallpaper.core.image.provider.ImageProvider;
 import dev.wallpaper.domain.enums.OrientationEnum;
-import dev.wallpaper.exceptions.CreateWallpaperException;
+import dev.wallpaper.domain.exceptions.CreateWallpaperException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

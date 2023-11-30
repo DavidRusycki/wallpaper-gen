@@ -1,6 +1,6 @@
 package dev.wallpaper.core.image.provider.pexels;
 
-import dev.wallpaper.exceptions.ImageDownloadException;
+import dev.wallpaper.domain.exceptions.ImageDownloadException;
 import kong.unirest.GetRequest;
 import kong.unirest.Unirest;
 import org.slf4j.Logger;

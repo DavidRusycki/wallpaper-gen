@@ -2,7 +2,7 @@ package dev.wallpaper.core.image.provider.pexels;
 
 import dev.wallpaper.domain.enums.OrientationEnum;
 import dev.wallpaper.domain.provider.IProvider;
-import dev.wallpaper.exceptions.ImageDownloadException;
+import dev.wallpaper.domain.exceptions.ImageDownloadException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

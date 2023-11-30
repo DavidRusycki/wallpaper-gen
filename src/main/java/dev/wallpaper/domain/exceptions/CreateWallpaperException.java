@@ -1,4 +1,4 @@
-package dev.wallpaper.exceptions;
+package dev.wallpaper.domain.exceptions;
 
 public class CreateWallpaperException extends Exception {
 

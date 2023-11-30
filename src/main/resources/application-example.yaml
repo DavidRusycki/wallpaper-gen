@@ -1,6 +1,6 @@
 # Pexels
 pexels:
-  key: 'KJSFKLÇSJDÇFLKJSÇDKLJ'
+  key: 'KJSFKLï¿½SJDï¿½FLKJSï¿½DKLJ'
   url: 'https://api.pexels.com/v1/curated'
   per_page: 80
 
@@ -9,7 +9,3 @@ logging:
   level:
     dev.wallpaper: 'DEBUG'
 
-# File Appender
-file-appender:
-  active: true
-  path: '/home/david/Downloads/images'

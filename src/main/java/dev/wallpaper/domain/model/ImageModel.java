@@ -1,5 +1,6 @@
 package dev.wallpaper.domain.model;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import dev.wallpaper.domain.enums.OrientationEnum;
 import kong.unirest.json.JSONObject;
 import lombok.Data;
@@ -27,6 +28,15 @@ public class ImageModel {
         this.height = (Integer) json.getInt("height");
         this.url = json.getJSONObject("src").getString("original");
         this.alt = json.getString("alt");
+        this.loadOrientation();
+    }
+
+    public ImageModel(JsonNode json) {
+        this.id = json.get("id").bigIntegerValue();
+        this.width = (Integer) json.get("width").intValue();
+        this.height = (Integer) json.get("height").intValue();
+        this.url = json.get("src").get("original").asText();
+        this.alt = json.get("alt").asText();
         this.loadOrientation();
     }
 
